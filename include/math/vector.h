@@ -20,6 +20,11 @@ namespace Math {
             Vector operator/(const Vector& vec);
             Vector operator=(const Vector& vec);
 
+            Vector operator+(float value);
+            Vector operator-(float value);
+            Vector operator*(float value);
+            Vector operator/(float value);
+
             std::ostream& operator<<(std::ostream& out);
     };
 };

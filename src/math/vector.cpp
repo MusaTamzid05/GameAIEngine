@@ -50,6 +50,47 @@ namespace Math {
         return Vector(vec.x , vec.y);
     }
 
+    Vector Vector::operator+(float value) {
+
+        Vector vec;
+
+        vec.x = x + value;
+        vec.y = y + value;
+
+        return vec;
+    }
+
+    Vector Vector::operator-(float value) {
+
+        Vector vec;
+
+        vec.x = x - value;
+        vec.y = y - value;
+
+        return vec;
+    }
+
+
+    Vector Vector::operator*(float value) {
+
+        Vector vec;
+
+        vec.x = x * value;
+        vec.y = y * value;
+
+        return vec;
+    }
+
+
+    Vector Vector::operator/(float value) {
+
+        Vector vec;
+
+        vec.x = x / value;
+        vec.y = y / value;
+
+        return vec;
+    }
 
     std::ostream& Vector::operator<<(std::ostream& out) {
         out << "x : " << x << " y :" << y << "\n";
