@@ -6,6 +6,7 @@ project(ai_play)
 set(SOURCE_FILES
     src/main.cpp
     src/math/vector.cpp
+    src/physics/steering_output.cpp
     )
 
 add_executable(ai_play ${SOURCE_FILES})

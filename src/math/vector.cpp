@@ -97,4 +97,91 @@ namespace Math {
         return out;
     }
 
+
+    // =============================================
+
+
+    Vector Vector::operator+=(const Vector& vec) {
+
+        Vector new_vec;
+        new_vec.x  = x + vec.x;
+        new_vec.y  = y + vec.y;
+
+        return new_vec;
+    }
+
+
+    Vector Vector::operator-=(const Vector& vec) {
+
+        Vector new_vec;
+        new_vec.x  = x - vec.x;
+        new_vec.y  = y - vec.y;
+
+        return new_vec;
+    }
+
+
+    Vector Vector::operator*=(const Vector& vec) {
+
+        Vector new_vec;
+        new_vec.x  = x * vec.x;
+        new_vec.y  = y *  vec.y;
+
+        return new_vec;
+    }
+
+
+    Vector Vector::operator/=(const Vector& vec) {
+
+        Vector new_vec;
+        new_vec.x  = x / vec.x;
+        new_vec.y  = y / vec.y;
+        return new_vec;
+    }
+
+    
+
+    Vector Vector::operator+=(float value) {
+
+        Vector vec;
+
+        vec.x = x + value;
+        vec.y = y + value;
+
+        return vec;
+    }
+
+    Vector Vector::operator-=(float value) {
+
+        Vector vec;
+
+        vec.x = x - value;
+        vec.y = y - value;
+
+        return vec;
+    }
+
+
+    Vector Vector::operator*=(float value) {
+
+        Vector vec;
+
+        vec.x = x * value;
+        vec.y = y * value;
+
+        return vec;
+    }
+
+
+    Vector Vector::operator/=(float value) {
+
+        Vector vec;
+
+        vec.x = x / value;
+        vec.y = y / value;
+
+        return vec;
+    }
+
+
 };

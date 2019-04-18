@@ -25,6 +25,17 @@ namespace Math {
             Vector operator*(float value);
             Vector operator/(float value);
 
+
+            Vector operator+=(const Vector& vec);
+            Vector operator-=(const Vector& vec);
+            Vector operator*=(const Vector& vec);
+            Vector operator/=(const Vector& vec);
+
+            Vector operator+=(float value);
+            Vector operator-=(float value);
+            Vector operator*=(float value);
+            Vector operator/=(float value);
+
             std::ostream& operator<<(std::ostream& out);
     };
 };
