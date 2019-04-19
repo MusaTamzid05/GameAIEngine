@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "engine/circle.h"
+#include "engine/mouse.h"
 
 namespace Engine {
 
@@ -12,6 +13,7 @@ namespace Engine {
 
         m_entities.push_back(std::make_shared<Circle>(100 , 100));
         m_entities.push_back(std::make_shared<Circle>(150 , 100));
+        m_entities.push_back(std::make_shared<Mouse>());
         
 
 

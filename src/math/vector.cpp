@@ -92,13 +92,12 @@ namespace Math {
         return vec;
     }
 
-    std::ostream& Vector::operator<<(std::ostream& out) {
-        out << "x : " << x << " y :" << y << "\n";
+    std::ostream& operator<<(std::ostream& out , const Vector& vec) {
+        out << "x : " << vec.x << " y :" << vec.y;
         return out;
     }
 
 
-    // =============================================
 
 
     Vector Vector::operator+=(const Vector& vec) {

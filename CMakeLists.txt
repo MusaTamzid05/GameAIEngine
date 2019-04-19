@@ -9,6 +9,7 @@ set(SOURCE_FILES
     src/physics/steering_output.cpp
     src/engine/game.cpp
     src/engine/circle.cpp
+    src/engine/mouse.cpp
     )
 
 add_executable(ai_play ${SOURCE_FILES})

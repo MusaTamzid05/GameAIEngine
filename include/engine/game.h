@@ -35,7 +35,7 @@ namespace Engine {
 
             sf::RenderWindow m_window;
 
-            std::vector<std::shared_ptr<Circle>> m_entities;
+            std::vector<std::shared_ptr<Entity>> m_entities;
 
     };
 };
