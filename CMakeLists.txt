@@ -10,7 +10,7 @@ set(SOURCE_FILES
     src/engine/game.cpp
     src/engine/circle.cpp
     src/engine/mouse.cpp
-    src/engine/following_circle.cpp
+    src/engine/kinematic_seek_circle.cpp
     src/physics/motion_output.cpp
     src/physics/orientation.cpp
     src/physics/kinematic_seek.cpp

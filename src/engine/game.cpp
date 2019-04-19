@@ -1,7 +1,7 @@
 #include "engine/game.h"
 #include <SFML/Graphics.hpp>
 
-#include "engine/following_circle.h"
+#include "engine/kinematic_seek_circle.h"
 #include "engine/mouse.h"
 
 namespace Engine {
@@ -12,7 +12,7 @@ namespace Engine {
     window(sf::VideoMode(width , height) , title){
 
         Mouse*  mouse = new Mouse(&window);
-        entities.push_back(new FollowingCirle(mouse));
+        entities.push_back(new KinematicSeekCircle(mouse));
         entities.push_back(mouse);
         
     }
