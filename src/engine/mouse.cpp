@@ -13,12 +13,12 @@ namespace Engine {
     Mouse::~Mouse() {
 
     }
+
     void Mouse::update() {
 
         pos.x = sf::Mouse::getPosition(*m_window).x;
         pos.y = sf::Mouse::getPosition(*m_window).y;
 
-        std::cout << pos << "\n";
 
     }
 

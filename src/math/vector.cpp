@@ -1,4 +1,7 @@
 #include "math/vector.h"
+#include <cmath>
+#include <limits>
+#include <iostream>
 
 namespace Math {
 
@@ -47,7 +50,11 @@ namespace Math {
 
     
     Vector Vector::operator=(const Vector& vec) {
-        return Vector(vec.x , vec.y);
+
+        x = vec.x;
+        y = vec.y;
+
+        return *this;
     }
 
     Vector Vector::operator+(float value) {
@@ -102,84 +109,87 @@ namespace Math {
 
     Vector Vector::operator+=(const Vector& vec) {
 
-        Vector new_vec;
-        new_vec.x  = x + vec.x;
-        new_vec.y  = y + vec.y;
+        x +=  vec.x;
+        y +=  vec.y;
 
-        return new_vec;
+        return *this;
     }
 
 
     Vector Vector::operator-=(const Vector& vec) {
 
-        Vector new_vec;
-        new_vec.x  = x - vec.x;
-        new_vec.y  = y - vec.y;
+        x  -=  vec.x;
+        y  -=  vec.y;
 
-        return new_vec;
+        return *this;
     }
 
 
     Vector Vector::operator*=(const Vector& vec) {
 
-        Vector new_vec;
-        new_vec.x  = x * vec.x;
-        new_vec.y  = y *  vec.y;
+        x  *=  vec.x;
+        y  *=  vec.y;
 
-        return new_vec;
+        return *this;
     }
 
 
     Vector Vector::operator/=(const Vector& vec) {
 
-        Vector new_vec;
-        new_vec.x  = x / vec.x;
-        new_vec.y  = y / vec.y;
-        return new_vec;
+        x  /=  vec.x;
+        y  /=  vec.y;
+
+        return *this;
     }
 
     
 
     Vector Vector::operator+=(float value) {
 
-        Vector vec;
+        x  +=  value;
+        y  +=  value;
 
-        vec.x = x + value;
-        vec.y = y + value;
-
-        return vec;
+        return *this;
     }
 
     Vector Vector::operator-=(float value) {
 
-        Vector vec;
+        x  -=  value;
+        y  -=  value;
 
-        vec.x = x - value;
-        vec.y = y - value;
-
-        return vec;
+        return *this;
     }
 
 
     Vector Vector::operator*=(float value) {
 
-        Vector vec;
+        x  *=  value;
+        y  *=  value;
 
-        vec.x = x * value;
-        vec.y = y * value;
-
-        return vec;
+        return *this;
     }
 
 
     Vector Vector::operator/=(float value) {
 
-        Vector vec;
+        x  /=  value;
+        y  /=  value;
 
-        vec.x = x / value;
-        vec.y = y / value;
+        return *this;
+    }
 
-        return vec;
+    float Vector::length() {
+        return sqrt(x * x + y * y);
+    }
+
+    float Vector::normalize() {
+
+        float vector_length = length();
+
+        if(vector_length > std::numeric_limits<double>::epsilon()) {
+            this->x /= vector_length;
+            this->y /= vector_length;
+        }
     }
 
 

@@ -11,6 +11,9 @@ set(SOURCE_FILES
     src/engine/circle.cpp
     src/engine/mouse.cpp
     src/engine/following_circle.cpp
+    src/physics/motion_output.cpp
+    src/physics/orientation.cpp
+    src/physics/kinematic_seek.cpp
     )
 
 add_executable(ai_play ${SOURCE_FILES})

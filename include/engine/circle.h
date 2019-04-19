@@ -2,7 +2,7 @@
 #define CIRCLE_H
 
 #include "engine/entity.h"
-#include <memory>
+#include "math/vector.h"
 
 
 namespace sf {
@@ -16,14 +16,17 @@ namespace Engine {
         public:
 
             Circle( int pos_x = 100 , int pos_y = 100 , int radius = 10);
-            virtual ~Circle() {}
+            virtual ~Circle();
 
             virtual void draw(sf::RenderWindow& window);
             virtual void update();
 
+            Math::Vector get_position();
+            void set_position(const Math::Vector& pos);
+
         protected:
 
-            std::shared_ptr<sf::CircleShape> m_circle;
+            sf::CircleShape* circle;
 
     };
 };

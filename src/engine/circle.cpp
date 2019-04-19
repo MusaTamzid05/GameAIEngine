@@ -5,20 +5,31 @@
 namespace Engine {
 
     Circle::Circle( int pos_x , int pos_y , int radius):
-    m_circle(new sf::CircleShape(radius)){
-        m_circle->setFillColor(sf::Color::Blue);
-        m_circle->setPosition(pos_x , pos_y);
+    circle(new sf::CircleShape(radius)){
+        circle->setFillColor(sf::Color::Blue);
+        circle->setPosition(pos_x , pos_y);
 
     }
 
+    Circle::~Circle() {
+        delete circle;
+    }
 
     void Circle::draw(sf::RenderWindow& window) {
-        window.draw(*m_circle);
+        window.draw(*circle);
     }
 
 
     void Circle::update() {
 
+    }
+
+    Math::Vector Circle::get_position() {
+        return Math::Vector(circle->getPosition().x , circle->getPosition().y);
+    }
+
+    void Circle::set_position(const Math::Vector& pos) {
+        circle->setPosition(pos.x , pos.y);
     }
 
 };

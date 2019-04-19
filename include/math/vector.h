@@ -36,6 +36,9 @@ namespace Math {
             Vector operator*=(float value);
             Vector operator/=(float value);
 
+            float length();
+            float normalize();
+
     };
 
     
