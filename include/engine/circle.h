@@ -15,7 +15,7 @@ namespace Engine {
 
         public:
 
-            Circle( int pos_x = 100 , int pos_y = 100 , int radius = 10);
+            Circle( int pos_x = 0, int pos_y = 0, int radius = 10);
             virtual ~Circle();
 
             virtual void draw(sf::RenderWindow& window);

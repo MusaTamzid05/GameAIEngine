@@ -1,13 +1,30 @@
 #include "engine/circle.h"
+#include "engine/util.h"
+#include "engine/defines.h"
 #include <SFML/Graphics/CircleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+
+#include <iostream>
 
 namespace Engine {
 
     Circle::Circle( int pos_x , int pos_y , int radius):
     circle(new sf::CircleShape(radius)){
-        circle->setFillColor(sf::Color::Blue);
-        circle->setPosition(pos_x , pos_y);
+
+        if(pos_x == 0 && pos_y == 0) 
+            circle->setPosition(Util::generate_number_between(0 , Define::WIDTH), Util::generate_number_between(0 ,Define::HEIGHT));
+        else
+            circle->setPosition(pos_x , pos_y);
+
+        circle->setOutlineColor(sf::Color(0.0 , 0.0 , 0.0));
+        circle->setOutlineThickness(1);
+        circle->setFillColor(
+                sf::Color(
+                    Util::generate_number_between(1 , 255),
+                    Util::generate_number_between(1 , 255),
+                    Util::generate_number_between(1 , 255)
+                    )
+                );
 
     }
 

@@ -12,7 +12,10 @@ namespace Engine {
     window(sf::VideoMode(width , height) , title){
 
         Mouse*  mouse = new Mouse(&window);
-        entities.push_back(new KinematicSeekCircle(mouse));
+
+        for(unsigned int i = 0 ; i <  10 ; i++)
+            entities.push_back(new KinematicSeekCircle(mouse));
+
         entities.push_back(mouse);
         
     }
@@ -45,7 +48,7 @@ namespace Engine {
 
     void Game::render() {
 
-        window.clear();
+        window.clear(sf::Color(50 , 0 , 100));
 
         for(auto entity : entities)
             entity->draw(window);

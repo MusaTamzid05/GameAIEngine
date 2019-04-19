@@ -14,6 +14,7 @@ set(SOURCE_FILES
     src/physics/motion_output.cpp
     src/physics/orientation.cpp
     src/physics/kinematic_seek.cpp
+    src/engine/util.cpp
     )
 
 add_executable(ai_play ${SOURCE_FILES})
