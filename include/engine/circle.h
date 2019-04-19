@@ -18,10 +18,10 @@ namespace Engine {
             Circle( int pos_x = 100 , int pos_y = 100 , int radius = 10);
             virtual ~Circle() {}
 
-            void draw(sf::RenderWindow& window);
-            void update();
+            virtual void draw(sf::RenderWindow& window);
+            virtual void update();
 
-        private:
+        protected:
 
             std::shared_ptr<sf::CircleShape> m_circle;
 

@@ -10,6 +10,7 @@ set(SOURCE_FILES
     src/engine/game.cpp
     src/engine/circle.cpp
     src/engine/mouse.cpp
+    src/engine/following_circle.cpp
     )
 
 add_executable(ai_play ${SOURCE_FILES})

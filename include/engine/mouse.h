@@ -15,8 +15,8 @@ namespace Engine {
 
         public:
 
-            Mouse();
-            virtual ~Mouse() {}
+            Mouse(sf::RenderWindow* window);
+            virtual ~Mouse();
 
 
             void update();
@@ -27,7 +27,7 @@ namespace Engine {
 
         private:
             Math::Vector pos;
-            std::shared_ptr<sf::RenderWindow> window;
+            sf::RenderWindow*  m_window;
 
 
     };

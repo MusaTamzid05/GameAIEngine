@@ -1,17 +1,22 @@
 #include "engine/mouse.h"
 #include <SFML/Window/Mouse.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
 #include <iostream>
 
 namespace Engine {
 
+    Mouse::Mouse(sf::RenderWindow* window):
+    m_window(window){
+    }
 
-    Mouse::Mouse() {
+
+    Mouse::~Mouse() {
 
     }
     void Mouse::update() {
 
-        pos.x = sf::Mouse::getPosition().x;
-        pos.y = sf::Mouse::getPosition().y;
+        pos.x = sf::Mouse::getPosition(*m_window).x;
+        pos.y = sf::Mouse::getPosition(*m_window).y;
 
         std::cout << pos << "\n";
 

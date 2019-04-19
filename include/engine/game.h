@@ -8,7 +8,6 @@
 #include "engine/entity.h"
 
 #include <vector>
-#include <memory>
 
 namespace Engine {
 
@@ -19,7 +18,7 @@ namespace Engine {
         public:
 
             Game(int width = 640 , int height = 480 , const std::string& title = "Game");
-            virtual ~Game() {}
+            virtual ~Game();
 
             void run();
 
@@ -33,9 +32,9 @@ namespace Engine {
             static sf::Time time_per_frame;
 
 
-            sf::RenderWindow m_window;
+            sf::RenderWindow  window;
 
-            std::vector<std::shared_ptr<Entity>> m_entities;
+            std::vector<Entity*> entities;
 
     };
 };
