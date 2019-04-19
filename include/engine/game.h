@@ -5,9 +5,14 @@
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/Text.hpp>
 
-#include "engine/circle.h"
+#include "engine/entity.h"
+
+#include <vector>
+#include <memory>
 
 namespace Engine {
+
+    class Circle;
 
     class Game {
 
@@ -30,7 +35,7 @@ namespace Engine {
 
             sf::RenderWindow m_window;
 
-            Circle circle;
+            std::vector<std::shared_ptr<Circle>> m_entities;
 
     };
 };
