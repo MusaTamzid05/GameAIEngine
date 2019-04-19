@@ -7,6 +7,8 @@ set(SOURCE_FILES
     src/main.cpp
     src/math/vector.cpp
     src/physics/steering_output.cpp
+    src/engine/game.cpp
+    src/engine/circle.cpp
     )
 
 add_executable(ai_play ${SOURCE_FILES})
@@ -18,4 +20,4 @@ include_directories(
     )
 
 
-target_link_libraries(ai_play)
+target_link_libraries(ai_play sfml-graphics sfml-window sfml-system)
