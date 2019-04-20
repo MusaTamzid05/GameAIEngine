@@ -1,7 +1,7 @@
 #include "engine/game.h"
 #include <SFML/Graphics.hpp>
 
-#include "engine/steering_seek_triangle.h"
+#include "engine/steering_flee_triangle.h"
 #include "engine/mouse.h"
 
 namespace Engine {
@@ -14,7 +14,7 @@ namespace Engine {
         Mouse*  mouse = new Mouse(&window);
 
         for(unsigned int i = 0 ; i <  10 ; i++)
-            entities.push_back(new SteeringSeekTriangle(mouse));
+            entities.push_back(new SteeringFleeTriangle(mouse));
 
         entities.push_back(mouse);
         

@@ -68,7 +68,7 @@ namespace Engine {
         if(pos.y < 0)
             pos.y = Define::HEIGHT;
 
-        if(pos.y >  Define::HEIGHT)
+        else if(pos.y >  Define::HEIGHT)
             pos.y = 0;
 
         set_position(pos);
