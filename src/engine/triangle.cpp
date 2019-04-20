@@ -11,7 +11,7 @@ namespace Engine {
 
     Triangle::Triangle( int pos_x , int pos_y ):
         Shape() ,
-        current_orientation(0.1){
+        current_orientation(Define::TRIANGLE_DEFAULT_ORIENTAION){
             circle = new sf::CircleShape(10 , Define::POLYGUNS);
             init_attributes(pos_x , pos_y);
     }

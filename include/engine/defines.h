@@ -10,6 +10,7 @@ namespace Engine {
         const float MAX_SPEED = 4.0;
         const float RADIUS = 5.0;
         const int POLYGUNS= 3.0;
+        const int TRIANGLE_DEFAULT_ORIENTAION = 1.0;
     };
 };
 #endif

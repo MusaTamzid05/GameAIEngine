@@ -23,6 +23,9 @@ namespace Engine {
             virtual ~Triangle();
             void create_circle(int radius);
 
+            float get_orientation() { return current_orientation; }
+            float set_orientation(float orientation) { current_orientation = orientation; }
+
         protected:
 
             float current_orientation;
