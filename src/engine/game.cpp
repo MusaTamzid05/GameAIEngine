@@ -1,7 +1,7 @@
 #include "engine/game.h"
 #include <SFML/Graphics.hpp>
 
-#include "engine/kinematic_seek_circle.h"
+#include "engine/kinematic_flee_circle.h"
 #include "engine/mouse.h"
 
 namespace Engine {
@@ -14,7 +14,7 @@ namespace Engine {
         Mouse*  mouse = new Mouse(&window);
 
         for(unsigned int i = 0 ; i <  10 ; i++)
-            entities.push_back(new KinematicSeekCircle(mouse));
+            entities.push_back(new KinematicFleeCircle(mouse));
 
         entities.push_back(mouse);
         
