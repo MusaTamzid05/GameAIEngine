@@ -1,7 +1,7 @@
 #include "engine/game.h"
 #include <SFML/Graphics.hpp>
 
-#include "engine/kinematic_arrive_circle.h"
+#include "engine/kinematic_wander_triangle.h"
 #include "engine/mouse.h"
 
 namespace Engine {
@@ -13,8 +13,8 @@ namespace Engine {
 
         Mouse*  mouse = new Mouse(&window);
 
-        for(unsigned int i = 0 ; i <  10 ; i++)
-            entities.push_back(new KinematicArriveCircle(mouse));
+        for(unsigned int i = 0 ; i <  1 ; i++)
+            entities.push_back(new KinematicWanderTriangle(mouse));
 
         entities.push_back(mouse);
         

@@ -19,6 +19,10 @@ set(SOURCE_FILES
     src/engine/kinematic_flee_circle.cpp
     src/engine/kinematic_arrive_circle.cpp
     src/physics/kinematic_arrive.cpp
+    src/engine/triangle.cpp
+    src/engine/kinematic_wander_triangle.cpp
+    src/physics/kinematic_wander.cpp
+    src/engine/shape.cpp
     )
 
 add_executable(ai_play ${SOURCE_FILES})
