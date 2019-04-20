@@ -4,6 +4,7 @@
 #include <SFML/Graphics/CircleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 
+#include "engine/defines.h"
 #include <iostream>
 
 namespace Engine {
@@ -39,6 +40,7 @@ namespace Engine {
 
     void Circle::update() {
 
+        check_edge();
     }
 
     Math::Vector Circle::get_position() {
@@ -49,4 +51,26 @@ namespace Engine {
         circle->setPosition(pos.x , pos.y);
     }
 
+
+    void Circle::check_edge() {
+
+        Math::Vector pos = get_position();
+
+        if(pos.x < 0)
+            pos.x = Define::WIDTH;
+
+        else if(pos.x >  Define::WIDTH)
+            pos.x = 0;
+
+
+        if(pos.y < 0)
+            pos.y = Define::HEIGHT;
+
+        if(pos.y >  Define::HEIGHT)
+            pos.y = 0;
+
+        set_position(pos);
+    }
+
 };
+

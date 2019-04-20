@@ -21,5 +21,7 @@ namespace Engine {
 
         Math::Vector new_pos = src + kinematic_seek.velocity;
         set_position(new_pos);
+
+        Circle::update();
     }
 };

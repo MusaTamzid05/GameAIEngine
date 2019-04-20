@@ -28,6 +28,8 @@ namespace Engine {
 
             sf::CircleShape* circle;
 
+            void check_edge();
+
     };
 };
 #endif
