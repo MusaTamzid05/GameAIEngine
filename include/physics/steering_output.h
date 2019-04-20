@@ -7,6 +7,7 @@ namespace Physics {
 
     struct SteeringOutput {
 
+        SteeringOutput() {}
         SteeringOutput(const Math::Vector& linear, float angular);
         virtual ~SteeringOutput() {}
 

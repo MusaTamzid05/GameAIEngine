@@ -25,8 +25,13 @@ namespace Engine {
             Math::Vector get_position();
             void set_position(const Math::Vector& pos);
 
+            void set_velocity(const Math::Vector& velocity) { this->velocity = velocity; }
+            Math::Vector get_velocity() { return velocity; }
+
         protected:
 
+
+            Math::Vector velocity;
             sf::CircleShape* circle;
             void check_edge();
 

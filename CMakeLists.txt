@@ -23,6 +23,9 @@ set(SOURCE_FILES
     src/engine/kinematic_wander_triangle.cpp
     src/physics/kinematic_wander.cpp
     src/engine/shape.cpp
+    src/engine/steering_triangle.cpp
+    src/engine/steering_seek_triangle.cpp
+    src/physics/steering_seek.cpp
     )
 
 add_executable(ai_play ${SOURCE_FILES})
