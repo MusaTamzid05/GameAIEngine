@@ -59,17 +59,17 @@ namespace Engine {
         Math::Vector pos = get_position();
 
         if(pos.x < 0)
-            pos.x = Define::WIDTH;
-
-        else if(pos.x >  Define::WIDTH)
             pos.x = 0;
+
+        else if(pos.x >=  Define::WIDTH)
+            pos.x = Define::WIDTH - Define::BORDER_PADDING;
 
 
         if(pos.y < 0)
-            pos.y = Define::HEIGHT;
-
-        else if(pos.y >  Define::HEIGHT)
             pos.y = 0;
+
+        else if(pos.y >=  Define::HEIGHT)
+            pos.y = Define::HEIGHT - Define::BORDER_PADDING;
 
         set_position(pos);
     }
