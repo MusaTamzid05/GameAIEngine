@@ -4,15 +4,20 @@
 
 namespace Physics {
 
-    SteeringOutput get_steering_flee(Engine::Shape& object , Math::Vector& dst) {
 
-        SteeringOutput result;
-        result.linear =  object.get_position() - dst;
+    SteeringFlee::SteeringFlee(Physics::Kinematic*  character , Physics::Kinematic*  target):SteeringBehavior(character , target) {
+
+    }
+
+    SteeringOutput SteeringFlee::get_steering_output() {
+
+        Physics::SteeringOutput result;
+        result.linear = character->position - target->position;
         result.linear.normalize();
         result.linear *= Engine::Define::MAX_ACCELERATION;
         result.angular = 0;
-
         return result;
-
     }
+
+
 };

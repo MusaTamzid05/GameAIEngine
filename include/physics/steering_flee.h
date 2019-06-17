@@ -2,12 +2,19 @@
 #define STEERING_FLEE_H
 
 #include "physics/steering_output.h"
+#include "physics/steering_behavior.h"
 
 namespace Engine {
     class Shape;
 };
 
 namespace Physics {
-    SteeringOutput get_steering_flee(Engine::Shape& object , Math::Vector& dst);
+
+    class SteeringFlee : public SteeringBehavior {
+        public:
+            SteeringFlee(Physics::Kinematic*  character , Physics::Kinematic*  target);
+            SteeringOutput get_steering_output();
+    };
+
 };
 #endif
