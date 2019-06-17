@@ -11,11 +11,12 @@ namespace Physics {
 
 
         public:
-            Kinematic();
+
+            Kinematic() {}
+            Kinematic(const Math::Vector& position , const Math::Vector& velocity = Math::Vector(0, 0));
             virtual ~Kinematic(){}
 
             void update(SteeringOutput& steering , float time);
-        private:
 
             Math::Vector position;
             Math::Vector velocity;

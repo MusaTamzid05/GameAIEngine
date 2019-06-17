@@ -28,6 +28,7 @@ set(SOURCE_FILES
     src/physics/steering_seek.cpp
     src/physics/steering_flee.cpp
     src/engine/steering_flee_triangle.cpp
+    src/physics/steering_behavior.cpp
     )
 
 add_executable(ai_play ${SOURCE_FILES})

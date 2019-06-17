@@ -14,7 +14,11 @@ namespace Engine {
 
     void SteeringSeekTriangle::update() {
         Math::Vector dst(mouse->get_position().x , mouse->get_position().y);
-        Physics::SteeringOutput result = Physics::get_steering_seek(*this , dst);
+        target.position = mouse->get_position();
+        charecter.position = get_position();
+
+        Physics::SteeringSeek steering_seek(&charecter , &target);
+        Physics::SteeringOutput result = steering_seek.get_steering_output();
 
         Math::Vector old_pos = get_position();
         Math::Vector new_pos = old_pos + result.linear;

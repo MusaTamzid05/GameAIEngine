@@ -2,6 +2,7 @@
 #define STEERING_TRIANGLE_H
 
 #include "engine/triangle.h"
+#include "physics/kinematic.h"
 
 namespace Engine {
 
@@ -17,6 +18,8 @@ namespace Engine {
         protected:
 
             Mouse*  mouse;
+            Physics::Kinematic charecter;
+            Physics::Kinematic target;
 
     };
 };

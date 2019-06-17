@@ -2,7 +2,9 @@
 
 namespace Physics {
 
-    Kinematic::Kinematic() {
+    Kinematic::Kinematic(const Math::Vector& position , const Math::Vector& velocity):
+    position(position),
+    velocity(velocity){
 
     }
 
