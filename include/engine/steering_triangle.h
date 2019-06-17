@@ -20,6 +20,9 @@ namespace Engine {
             Mouse*  mouse;
             Physics::Kinematic charecter;
             Physics::Kinematic target;
+            Physics::SteeringOutput result;
+
+            void update_position();
 
     };
 };
